@@ -45,4 +45,4 @@ with gr.Blocks() as demo:
         title='☀️ Farol'
     )
 
-demo.launch(auth=[('user','admin'),('allan','spadini')],auth_message='Entre seu e-mail e senha', show_api=False)
+demo.launch(auth=[('user','admin'),('allan','spadini')],auth_message='Entre seu e-mail e senha', share=True,show_api=False)
