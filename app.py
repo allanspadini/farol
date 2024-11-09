@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import gradio as gr
 
 load_dotenv()
-
+chave = os.getenv('chave')
 # Função para chamar a API com LiteLLM usando o modelo gemini
 def call_gemini_api(messages, model="gemini/gemini-pro"):
     GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
@@ -45,5 +45,5 @@ with gr.Blocks() as demo:
         title='☀️ Farol'
     )
 
-#demo.launch(auth=[('user','admin'),('allan','spadini')],auth_message='Entre seu e-mail e senha', share=True,show_api=False)
-demo.launch(share=True,show_api=False)
+demo.launch(auth=[('user',chave)],auth_message='Entre seu e-mail e senha', share=True,show_api=False)
+#demo.launch(share=True,show_api=False)
