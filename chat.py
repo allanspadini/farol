@@ -96,5 +96,5 @@ if st.session_state.authenticated:
         st.session_state.messages.append({"role": "assistant", "content": bot_response})
 
         # Exibir a resposta do modelo
-        with st.chat_message("assistant",avatar=":material/person:"):
+        with st.chat_message("assistant",avatar=":material/smart_toy:"):
             st.markdown(bot_response)
